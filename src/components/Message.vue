@@ -1,15 +1,17 @@
 <template>
-  <div class="box is-info">
-    <p>
-      <slot></slot>
-    </p>
+  <div class="container">
+    <div class="box is-info">
+      <p>
+        <slot></slot>
+      </p>
+    </div>
   </div>
 </template>
 
 <script>
-    export default {
+  export default {
 
-    }
+  }
 </script>
 
 <style lang="scss">

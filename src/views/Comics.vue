@@ -1,5 +1,8 @@
 <template>
-  <div id="app">
+  <div class="container">
+    <router-link to="/" tag="li" exact>
+      <a>Home</a>
+    </router-link>
     <message>Hello Vue</message>
 
     <ul>
@@ -8,16 +11,16 @@
         <p>Name: {{comic.name}}</p>
       </li>
     </ul>
-
   </div>
 </template>
 
 <script>
-import Message from './components/Message';  // note the import of the component (you bring it in)
+import Message from '../components/Message';  // note the import of the component (you bring it in)
 import Axios from 'axios';
+import Routes from '../routes.js';
+
 export default {
-  name: 'app',
-  components: { Message },  // AND also note the listing of the component (you use it)
+  components: { Message, Routes },  // AND also note the listing of the component (you use it)
   data () {
     return {
       comics: []
